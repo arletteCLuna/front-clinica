@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="header.component.css">
+</head>
+<body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-3">
+            <div class="logo">
+              <img [src]="logoblanco"[style.width.px]="200" [style.height.px]="100">
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-9" style="text-align: end;">
+            <div class="menu_icon" [class.menu_icon_Class]="menu_icon_variable" (click)="openMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="menu" [class.menuClass]="menuVariable">
+              <ul>
+                <br>
+                <li routerLink="/Inicio" routerLinkActive="active-link">Inicio</li>
+                <li routerLink="/Servicios" routerLinkActive="active-link">Servicios</li>
+                <li routerLink="/QuienesSomos" routerLinkActive="active-link">¿Quiénes somos?</li>
+                <li routerLink="/Contacto" routerLinkActive="active-link">Contacto</li>
+                <li routerLink="/Login" routerLinkActive="active-link">Agendar</li>
+                <li routerLink="/Registro" routerLinkActive="active-link">Registrarse</li>
+                <li routerLink="/Login" routerLinkActive="active-link" class="fas fa-user"></li>
+              </ul>
+    <!-- Agregar breadcrumbs después del menú -->
+    <div class="container">
+     <app-breadcrumbs></app-breadcrumbs>
+    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+</body>
+</html>
